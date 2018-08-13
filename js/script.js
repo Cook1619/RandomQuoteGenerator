@@ -51,7 +51,7 @@ var quotes =
 // Create the getRandomQuuote function and name it getRandomQuote
 
 function getRandomQuote(array) {
-    var randomQ = Math.floor(Math.random() * quotes.length)
+    var randomQ = Math.floor(Math.random() * quotes.length);
     //randomQ returns a number which is random, and quotes is an array of objects, so the first object is index[0] and so on so this will grab a random quote between 0-6 which is how many indexes this array has, and returns it
     return quotes[randomQ];
 }
@@ -59,7 +59,7 @@ function getRandomQuote(array) {
 // Create the printQuote funtion and name it printQuote
 function printQuote() {
     //calls getRandomQuote and stores it in a variable
-    var getQuotes = getRandomQuote(quotes);
+    let getQuotes = getRandomQuote(quotes);
     //Building up string pending on if there is a value in the object
     let quoteString = '';
     quoteString += `<p class="quote"> ${getQuotes.quote} </p>`
@@ -86,7 +86,7 @@ function colorChange() {
 }
 //calls the printquute function and will change everything every 3 seconds
 function switchQuotes() {
-    timeedSwitch = window.setInterval(printQuote, 3000);
+    timeedSwitch = window.setInterval(printQuote, 10000);
 }
 
 switchQuotes();
